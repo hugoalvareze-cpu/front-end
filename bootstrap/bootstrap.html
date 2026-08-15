@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bootstrap 5</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
+        <!-- Esto es un ejemplo de lo que no se debe hacer. No utilizar style dentro de HTML -->
+        <style>
+            .grid-demo-box {
+                background-color: #e2e8f0;
+                border: 1px solid #94a4b8;
+                padding: 1rem;
+                text-align: center;
+                font-weight: 600;
+                color: #334155;
+                border-radius: 0.25rem;
+            }
+
+            .grid-nested-box {
+                background-color: #cbd5e1;
+                border: 1px dashed #64748b;
+                padding: 0.5rem;
+                font-size: 0.85rem;
+            }
+
+            .section-separator {
+                border-top: 4px solid #3b82f6;
+                margin-top: 4rem;
+                margin-bottom: 4rem;
+            }
+        </style>
+    </head>
+    <body>
+        <main class="container py-5 mb-5">
+            <section>
+                <h2 class="h3 fw-bold border-bottom pb-2 mb-4">1. Arquitectura de Grillas</h2>
+                <h5 class="text-secondary mb-3">A. La cuadrícula base de 12 (100% del ancho)</h5>
+                <div class="row g-3 mb-4">
+                    <div class="col-1"><div class="grid-demo-box">1</div></div>
+                    <div class="col-1"><div class="grid-demo-box">2</div></div>
+                    <div class="col-1"><div class="grid-demo-box">3</div></div>
+                    <div class="col-1"><div class="grid-demo-box">4</div></div>
+                    <div class="col-1"><div class="grid-demo-box">5</div></div>
+                    <div class="col-1"><div class="grid-demo-box">6</div></div>
+                    <div class="col-1"><div class="grid-demo-box">7</div></div>
+                    <div class="col-1"><div class="grid-demo-box">8</div></div>
+                    <div class="col-1"><div class="grid-demo-box">9</div></div>
+                    <div class="col-1"><div class="grid-demo-box">10</div></div>
+                    <div class="col-1"><div class="grid-demo-box">11</div></div>
+                    <div class="col-1"><div class="grid-demo-box">12</div></div>
+                </div>
+
+                <h5 class="text-secondary mb-3">B. Breakpoints y Responsividad</h5>
+                <div class="row g-3 mb-4">
+                    <div class="col-12 col-md-6 col-lg-8">
+                        <div class="grid-demo-box">.col-12 .col-md-6 .col-lg-8</div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="grid-demo-box">.col-12 .col-md-6 .col-lg-4</div>
+                    </div>
+                </div>
+
+                <h5 class="text-secondary mb-3">C. Anidación de Grillas</h5>
+                <div class="row g-3">
+                    <div class="col-12 col-lg-6">
+                        <div
+                            class="grid-demo-box h-100 d-flex align-items-center justify-content-center"
+                        >
+                            Columna Padre Izquierda (.col-lg-6)
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="grid-demo-box bg-transparent border-0 p-0">
+                            <span class="d-block mb-2 text-center"
+                                >Columna Padre Derecha (.col-lg-6)</span
+                            >
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="grid-nested-box bg-warning text-dark text-center">
+                                        Sub-columna 100% (.col-12)
+                                    </div>
+                                </div>
+                                <div class="col-4"><div class="grid-nested-box">.col-4</div></div>
+                                <div class="col-4"><div class="grid-nested-box">.col-4</div></div>
+                                <div class="col-4"><div class="grid-nested-box">.col-4</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-separator"></div>
+
+            <section class="row g-4 mb-5">
+                <header class="col-12">
+                    <h2 class="h3 fw-bold border-bottom pb-2 mb-4">2. Utility API</h2>
+                </header>
+
+                <section class="col-12 col-md-6">
+                    <article class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Espaciados (m, p, t, b, s, e, x, y)</h5>
+                            <div class="bg-secondary text-white mt-4 mb-3 p-4 rounded text-center">
+                                Caja con <code>mt-4</code>, <code>mb-3</code> y <code>p-4</code>
+                            </div>
+                            <div
+                                class="bg-dark text-white px-5 py-2 rounded text-center d-inline-block mb-4"
+                            >
+                                Caja con <code>px-5</code> y <code>py-2</code>
+                            </div>
+
+                            <div class="d-flex bg-light border p-2 rounded">
+                                <div class="bg-primary text-white px-3 py-1 rounded">Flex Item</div>
+                                <div class="bg-danger text-white px-3 py-1 rounded ms-auto">
+                                    Empujado con <code class="text-info">.ms-auto</code>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="col-12 col-md-6">
+                    <article class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-2">Fondos y Textos</h5>
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <div class="p-3 bg-primary text-white rounded">bg-primary</div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="p-3 bg-success text-white rounded">bg-success</div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="p-3 bg-warning text-white rounded">bg-warning</div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="p-3 bg-danger text-white rounded">bg-danger</div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="p-3 bg-info text-white rounded">bg-info</div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="p-3 bg-dark text-white rounded">bg-dark</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </section>
+
+            <section class="mb-5">
+                <h2 class="h3 fw-bold border-bottom pb-2 mb-4">3. Componentes Complejos</h2>
+
+                <div class="row g-4">
+                    <div class="col-12 col-lg-7">
+                        <div
+                            id="carruselPrincipal"
+                            class="carousel slide carousel-fade shadow-sm rounded h-100 overflow-hidden"
+                            data-bs-ride="carousel"
+                        >
+                            <div class="carousel-indicators">
+                                <button
+                                    type="button"
+                                    data-bs-target="#carruselPrincipal"
+                                    data-bs-slide-to="0"
+                                    class="active"
+                                ></button>
+                                <button
+                                    type="button"
+                                    data-bs-target="#carruselPrincipal"
+                                    data-bs-slide-to="1"
+                                ></button>
+                                <button
+                                    type="button"
+                                    data-bs-target="#carruselPrincipal"
+                                    data-bs-slide-to="2"
+                                ></button>
+                            </div>
+
+                            <div class="carousel-inner h-100">
+                                <div class="carousel-item active h-100">
+                                    <img
+                                        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800"
+                                        class="d-block w-100 h-100 object-fit-cover"
+                                    />
+                                    <div
+                                        class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded px-3 py-2"
+                                    >
+                                        <h5>First slide label</h5>
+                                        <p>
+                                            Some representative placeholder content for the first
+                                            slide.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item h-100">
+                                    <img
+                                        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800"
+                                        class="d-block w-100 h-100 object-fit-cover"
+                                    />
+                                    <div
+                                        class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded px-3 py-2"
+                                    >
+                                        <h5>First slide label</h5>
+                                        <p>
+                                            Some representative placeholder content for the first
+                                            slide.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item h-100">
+                                    <img
+                                        src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800"
+                                        class="d-block w-100 h-100 object-fit-cover"
+                                    />
+                                    <div
+                                        class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded px-3 py-2"
+                                    >
+                                        <h5>First slide label</h5>
+                                        <p>
+                                            Some representative placeholder content for the first
+                                            slide.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button
+                                class="carousel-control-prev"
+                                type="button"
+                                data-bs-target="#carruselPrincipal"
+                                data-bs-slide="prev"
+                            >
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button
+                                class="carousel-control-next"
+                                type="button"
+                                data-bs-target="#carruselPrincipal"
+                                data-bs-slide="next"
+                            >
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-5 d-flex flex-column gap-4">
+                        <div class="accordion shadow-sm" id="acordeonTemas">
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <button
+                                        class="accordion-button"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#colapsoUno"
+                                    >
+                                        Filosofía Mobile First
+                                    </button>
+                                </div>
+                                <div
+                                    id="colapsoUno"
+                                    class="accordion-collapse collapse show"
+                                    data-bs-parent="acordeonTemas"
+                                >
+                                    <div class="accordion-body text-muted small">
+                                        Diseñar prioritariamente la visualización y estructura del
+                                        sitio en dispositivos móviles, escalando hacia pantallas de
+                                        mayor tamaño.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <button
+                                        class="accordion-button"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#colapsoDos"
+                                    >
+                                        Uso de CDN vs Local
+                                    </button>
+                                </div>
+                                <div
+                                    id="colapsoDos"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="acordeonTemas"
+                                >
+                                    <div class="accordion-body text-muted small">
+                                        Integrar mediante CDN mejora los tiempos de carga por caché,
+                                        mientras que los archivos locales permiten trabajar offline.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <article class="card border-0 shadow-sm text-center flex-grow-1">
+                            <div class="card-body">
+                                <img
+                                    src="https://placehold.co/100x100/3b82f6/white?text=Admin"
+                                    class="rounded-circle mb-3 shadow"
+                                    alt="Perfil"
+                                />
+                                <h5 class="card-title fw-bold text-dark">Programador</h5>
+                                <h6 class="card-subtitle mb-5 text-primary">FullStack Python</h6>
+
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary" type="button">
+                                        Ver Repositorio
+                                    </button>
+                                    <button class="btn btn-outline-secondary" type="button">
+                                        Contactar
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-separator"></div>
+
+            <section class="bg-white p-4 rounded shadow border border-light">
+                <h2 class="h3 fw-bold border-bottom pb-2 mb-4">
+                    4. Procesamiento de Datos y Formularios
+                </h2>
+
+                <div class="row">
+                    <form id="formularioAvanzado" class="bg-light p-4 rounded border mb-4">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <label for="usuarioNombre" class="form-label fw-bold"
+                                    >Nombre de Usuario</label
+                                >
+                                <input
+                                    id="usuarioNombre"
+                                    type="text"
+                                    class="form-control form-control-lg"
+                                    placeholder="Juanito Perez"
+                                    required
+                                />
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="usuarioClave" class="form-label fw-bold"
+                                    >Contraseña</label
+                                >
+                                <input
+                                    id="usuarioClave"
+                                    type="password"
+                                    class="form-control form-control-lg"
+                                    placeholder="***********"
+                                    required
+                                />
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="usuarioEmail" class="form-label fw-bold"
+                                    >Correo Electrónico</label
+                                >
+                                <input
+                                    id="usuarioEmail"
+                                    type="email"
+                                    class="form-control"
+                                    placeholder="correo@gmail.com"
+                                    required
+                                />
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="usuarioFecha" class="form-label fw-bold"
+                                    >Fecha de Nacimiento</label
+                                >
+                                <input
+                                    id="usuarioFecha"
+                                    type="date"
+                                    class="form-control"
+                                    required
+                                />
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-check form-switch">
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        role="switch"
+                                        id="switchSuscripcion"
+                                    />
+                                    <label class="form-check-label" for="switchSuscripcion"
+                                        >Suscruburse al Newsletter</label
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="d-flex justify-content-between">
+                            <button type="reset" class="btn btn-outline-danger px-4">
+                                Borrar Datos
+                            </button>
+                            <button
+                                type="submit"
+                                id="btnProcesar"
+                                class="btn btn-success px-5 fw-bold"
+                            >
+                                Procesar Registro
+                            </button>
+                        </div>
+                    </form>
+
+                    <div
+                        id="alertaSistema"
+                        class="alert alert-success alert-dismissible fade d-none"
+                        role="alert"
+                    >
+                        <h4 class="alert-heading">¡Registro Completado!</h4>
+                        <p>
+                            Los datos han sido validados e ingresados correctamente a nuestra base
+                            de datos.
+                        </p>
+                        <hr />
+                        <p class="mb-0 small">Esta es una alerta que utiliza clases de utilidad</p>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="alert"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-dark text-white text-center py-4">
+            <p class="mb-0">&copy; 2026 Dev Bootcamp - Componentes y Grillas Bootstrap v5</p>
+        </footer>
+
+        <script src="./js/app.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

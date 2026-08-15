@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+/*
+.logo-imag {
+  height: 18px;
+  width: 278px;
+}
+*/
+
+
+/*
+.card-body {
+  height: 150px;
+}
+*/
+
+
+/*
+img {
+  height: 180px;
+  width: 278px;
+} 
+*/
+
+/*
+.ubicacion {
+  font-size: 13px;
+}
+*/
+/*
+.card-img {
+  height: 180px;
+  width: 278px;
+} 
+*/
+.enviar {
+  margin-top: 50px;
+  align-items: center;
+}
+

@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main  {
+  padding-top: 40px;
+}
+
+.navbar-brand {
+  font-family: 'Lobster'
+ 
+}
+
+.custom-navbar {
+  background-color: #373A3C;
+   
+
+}
+
+body {
+    font-family:  "Cabin", sans-serif
+}
+
+.carousel-item img {
+  height: 233px;       /* ajusta según tu diseño */
+  width: 170px;
+  object-fit: scale-down;   /* recorta la imagen manteniendo proporción */
+}
+
+.ricomidafont {
+    font-family: "Lobster", sans-serif;
+}
+
+footer {
+  font-family: "Lobster", sans-serif;
+  background-color: #373A3C;
+  font-style: normal;
+}

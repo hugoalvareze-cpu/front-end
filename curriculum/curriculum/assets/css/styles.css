@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    color: #1348cc;
+    
+    text-align: center;
+}
+h2 {
+    color: #0a0e61e0;
+}
+h3 {
+    color: #061382d9;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(180, 194, 214);
+
+    margin: auto;
+    padding: 3%;
+}
+
+
+
+header {
+    text-align: center;
+    padding: 10px;
+}
+
+a {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+li {
+    color: rgba(0, 0, 255, 0.397)
+}
+
+nav {
+   
+    display: flex;
+   
+    
+}
+
+
+nav ul {
+    display: flex;
+    gap: 5px;
+    
+}
+
+nav ul li {
+    list-style: none;
+    
+}
+
+.foto {
+    text-align: center;
+    padding: 5%
+}
+
+
+.imagen {
+    width: 300px;
+    height: 300px;
+    
+    ;
+}
+
+.imagenesresumen {
+    display: flex;
+    
+}
+
+.resumenimg {
+    display: block;
+    
+    width: 300px;
+    height: 200px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 10px;
+}
+
+.logrosimg {
+    display: block;
+    width: 300px;
+    height: 200px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 10px;
+}
+
+#resumen {
+    margin: 50px;
+    
+}
+
+
+#datospersonales {
+    margin: 50px;
+}
+
+.p1 {
+    color: #1348cc;
+}
+
+
+.p2 {
+    color: #1348cc;
+}
+
+.p3 {
+    color: #1348cc;
+}
+
+
+
+#formacion {
+    margin: 50px;
+}
+
+#Premios {
+    margin: 50px;
+}
+
+.premioimg {
+      display: block;
+    width: 300px;
+    height: 200px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 10px;
+}
+
+footer {
+    margin: 30px;
+    text-align: right;
+  
+}

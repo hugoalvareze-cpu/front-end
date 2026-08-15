@@ -1,0 +1,13 @@
+body {
+    font-family:  "Open Sans", sans-serif;
+}
+
+.textfooter {
+    color: white;
+    
+}
+
+.card-img-top {
+    height: 200px;        /* altura igual para todas */
+    object-fit: cover;    /* mantiene proporción y recorta si es necesario */
+  }
